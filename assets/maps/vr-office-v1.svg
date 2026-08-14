@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="992" height="672" viewBox="0 0 992 672">
+  <style>
+    .wall{fill:#252a33;stroke:#d4b477;stroke-width:3;shape-rendering:crispEdges}
+    .room{fill:#343a45;stroke:#8e99a8;stroke-width:2;shape-rendering:crispEdges}
+    .exec{fill:#303740;stroke:#d4b477;stroke-width:2;shape-rendering:crispEdges}
+    .private{fill:#292f38;stroke:#9c7d9f;stroke-width:2;shape-rendering:crispEdges}
+    .social{fill:#3c4148;stroke:#86a998;stroke-width:2;shape-rendering:crispEdges}
+    .aud{fill:#2f3540;stroke:#c39d69;stroke-width:2;shape-rendering:crispEdges}
+    .corridor{fill:#20252d;stroke:#697483;stroke-width:2;shape-rendering:crispEdges}
+    .label{font-family:monospace;font-weight:700;font-size:15px;fill:#f3f1ea;text-anchor:middle}
+    .small{font-family:monospace;font-size:11px;fill:#c9cdd4;text-anchor:middle}
+    .desk{fill:#8c6848;stroke:#d0a875;stroke-width:2;shape-rendering:crispEdges}
+    .screen{fill:#263747;stroke:#87b6d8;stroke-width:1;shape-rendering:crispEdges}
+    .chair{fill:#555f6c;stroke:#929cab;stroke-width:1;shape-rendering:crispEdges}
+    .plant{fill:#52735d;stroke:#84a88d;stroke-width:1;shape-rendering:crispEdges}
+    .glass{fill:#43505d;fill-opacity:.7;stroke:#91b1c2;stroke-width:2;shape-rendering:crispEdges}
+    .door{fill:#d4b477;stroke:#fff1c9;stroke-width:2;shape-rendering:crispEdges}
+  </style>
+  <rect width="992" height="672" fill="#171b22"/>
+  <rect x="22" y="22" width="948" height="628" rx="3" class="wall"/>
+
+  <!-- top executive / team row -->
+  <rect x="42" y="40" width="260" height="150" class="exec"/>
+  <text x="172" y="64" class="label">CEO — VICTOR ROMERO</text>
+  <rect x="118" y="98" width="108" height="30" class="desk"/>
+  <rect x="158" y="88" width="28" height="15" class="screen"/>
+  <rect x="157" y="136" width="30" height="25" class="chair"/>
+  <circle cx="270" cy="155" r="11" class="plant"/>
+
+  <rect x="322" y="40" width="250" height="150" class="exec"/>
+  <text x="447" y="64" class="label">DIRETOR AUDIOVISUAL</text>
+  <rect x="378" y="98" width="138" height="32" class="desk"/>
+  <rect x="406" y="84" width="30" height="17" class="screen"/>
+  <rect x="454" y="84" width="30" height="17" class="screen"/>
+  <rect x="432" y="138" width="30" height="25" class="chair"/>
+
+  <rect x="592" y="40" width="358" height="150" class="room"/>
+  <text x="771" y="64" class="label">PRODUÇÃO — 3 ESTAÇÕES</text>
+  <g>
+    <rect x="620" y="102" width="88" height="28" class="desk"/><rect x="648" y="88" width="31" height="15" class="screen"/><rect x="649" y="138" width="30" height="24" class="chair"/>
+    <rect x="726" y="102" width="88" height="28" class="desk"/><rect x="754" y="88" width="31" height="15" class="screen"/><rect x="755" y="138" width="30" height="24" class="chair"/>
+    <rect x="832" y="102" width="88" height="28" class="desk"/><rect x="860" y="88" width="31" height="15" class="screen"/><rect x="861" y="138" width="30" height="24" class="chair"/>
+  </g>
+
+  <!-- private stack -->
+  <rect x="42" y="218" width="155" height="70" class="private"/><text x="119" y="248" class="label">PRIVATIVA 01</text><text x="119" y="269" class="small">SEM INTERRUPÇÕES</text>
+  <rect x="42" y="298" width="155" height="70" class="private"/><text x="119" y="328" class="label">PRIVATIVA 02</text><text x="119" y="349" class="small">SEM INTERRUPÇÕES</text>
+  <rect x="42" y="378" width="155" height="70" class="private"/><text x="119" y="408" class="label">PRIVATIVA 03</text><text x="119" y="429" class="small">SEM INTERRUPÇÕES</text>
+  <rect x="42" y="458" width="155" height="70" class="private"/><text x="119" y="488" class="label">PRIVATIVA 04</text><text x="119" y="509" class="small">SEM INTERRUPÇÕES</text>
+
+  <!-- corridor -->
+  <rect x="217" y="210" width="405" height="328" class="corridor"/>
+  <text x="419" y="235" class="small">CORREDOR CENTRAL</text>
+  <path d="M250 274 H585 M250 350 H585 M250 426 H585" stroke="#343b46" stroke-width="2" stroke-dasharray="8 8"/>
+  <rect x="386" y="314" width="66" height="28" class="glass"/><text x="419" y="333" class="small">LOUNGE</text>
+  <circle cx="290" cy="470" r="12" class="plant"/><circle cx="548" cy="470" r="12" class="plant"/>
+
+  <!-- social -->
+  <rect x="642" y="218" width="308" height="150" class="social"/>
+  <text x="796" y="244" class="label">ÁREA DE CONVIVÊNCIA</text>
+  <rect x="684" y="286" width="80" height="28" class="glass"/><rect x="828" y="286" width="80" height="28" class="glass"/>
+  <rect x="774" y="280" width="44" height="38" class="desk"/>
+  <circle cx="680" cy="336" r="10" class="plant"/><circle cx="912" cy="336" r="10" class="plant"/>
+
+  <!-- auditorium -->
+  <rect x="642" y="388" width="308" height="150" class="aud"/>
+  <text x="796" y="414" class="label">AUDITÓRIO</text>
+  <rect x="755" y="432" width="82" height="25" class="desk"/><rect x="770" y="425" width="52" height="10" class="screen"/>
+  <g fill="#555f6c" stroke="#929cab" stroke-width="1">
+    <rect x="686" y="475" width="26" height="18"/><rect x="726" y="475" width="26" height="18"/><rect x="766" y="475" width="26" height="18"/><rect x="806" y="475" width="26" height="18"/><rect x="846" y="475" width="26" height="18"/>
+    <rect x="686" y="505" width="26" height="18"/><rect x="726" y="505" width="26" height="18"/><rect x="766" y="505" width="26" height="18"/><rect x="806" y="505" width="26" height="18"/><rect x="846" y="505" width="26" height="18"/>
+  </g>
+
+  <!-- internal auditorium door -->
+  <rect x="622" y="432" width="20" height="56" class="door"/>
+  <path d="M636 438 V482" stroke="#6e5739" stroke-width="3"/>
+  <text x="612" y="514" class="small" text-anchor="end">PORTA INTERNA →</text>
+
+  <!-- reception -->
+  <rect x="42" y="566" width="908" height="82" class="room"/>
+  <text x="496" y="590" class="label">RECEPÇÃO / ENTRADA</text>
+  <rect x="414" y="606" width="164" height="26" class="desk"/>
+  <rect x="468" y="598" width="56" height="10" class="screen"/>
+  <text x="496" y="644" class="small">SPAWN → ACESSO DIRETO AO CORREDOR CENTRAL</text>
+
+  <!-- glass separators -->
+  <path d="M302 72 V184 M572 72 V184" stroke="#91b1c2" stroke-width="3" opacity=".8"/>
+</svg>
