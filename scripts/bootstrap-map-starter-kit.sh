@@ -24,16 +24,16 @@ else
 fi
 
 if ! command -v node >/dev/null 2>&1; then
-  echo "Node.js não encontrado. A planta-guia foi criada, mas a V1 visual não pôde ser gerada."
+  echo "Node.js não encontrado. A planta-guia foi criada, mas a V1 jogável não pôde ser gerada."
   exit 0
 fi
 
-echo "Gerando Escritório Virtual V1 estrutural..."
+echo "Gerando Escritório Virtual V1 em tiles reais..."
 node "${ROOT_DIR}/scripts/generate-playable-v1.js"
 
 cat <<EOF
 
-V1 preparada com sucesso.
+V1 REAL preparada com sucesso.
 
 Arquivo para teste:
   ${STARTER_DIR}/vr-office-v1.tmj
@@ -45,14 +45,23 @@ A V1 contém:
   - 4 Salas Privativas
   - Corredor Central
   - Área de Convivência
-  - Auditório
+  - Auditório com porta interna
   - Recepção
-  - Porta interna obrigatória para o Auditório
+  - Paredes com colisão
+  - Piso, paredes e mobiliário em tiles próprios
 
-Para iniciar o Map Starter Kit:
+IMPORTANTE:
+  O cenário visual padrão do office.tmj NÃO é mais usado na V1.
+  O gerador mantém somente a camada de spawn do starter kit e cria o escritório com tiles próprios.
+
+Para atualizar e iniciar:
+  cd "${ROOT_DIR}"
+  git pull
+  ./scripts/bootstrap-map-starter-kit.sh
   cd "${STARTER_DIR}"
   npm install
   npm run start
 
-Observação: esta é a V1 ESTRUTURAL. O cenário padrão é ocultado e substituído por uma planta visual própria. Colisões e acabamento pixel-art premium entram na próxima iteração após validarmos a circulação.
+Abra no WorkAdventure:
+  http://localhost:5173/vr-office-v1.tmj
 EOF
