@@ -17,36 +17,40 @@ else
 fi
 
 if ! command -v node >/dev/null 2>&1; then
-  echo "Node.js não encontrado. Instale Node.js antes de gerar a V2."
+  echo "Node.js não encontrado. Instale Node.js antes de gerar os mapas."
   exit 1
 fi
 
 echo "Gerando Escritório Virtual V2 independente..."
 node "${ROOT_DIR}/scripts/generate-playable-v2.js"
 
+echo ""
+echo "Gerando Escritório Virtual V3 PREMIUM..."
+node "${ROOT_DIR}/scripts/generate-playable-v3.js"
+
 cat <<EOF
 
-V2 INDEPENDENTE preparada com sucesso.
+V3 PREMIUM preparada com sucesso.
 
-Arquivo para teste:
-  ${STARTER_DIR}/vr-office-v2.tmj
+Arquivo recomendado para teste:
+  ${STARTER_DIR}/vr-office-v3.tmj
 
-A V2 contém:
-  - Sala CEO — Victor Romero
-  - Sala Diretor Audiovisual
-  - Produção — 3 estações
-  - 4 Salas Privativas
-  - Corredor Central
-  - Área de Convivência
-  - Auditório com porta interna pelo corredor
-  - Recepção / spawn
-  - Paredes e móveis com colisão
-  - Tiles próprios com linguagem visual premium estrutural
+A V3 contém:
+  - Sala CEO — Victor Romero com ambientação executiva
+  - Sala Diretor Audiovisual com identidade própria
+  - Produção — exatamente 3 estações completas
+  - Recepção mobiliada e spawn
+  - Área de Convivência central com sofás e mesa
+  - 4 Salas Privativas mobiliadas
+  - Auditório com palco, tela e fileiras de cadeiras
+  - Porta do Auditório pelo corredor interno
+  - Corredores decorados
+  - Colisão em paredes e mobiliário principal
+  - Tileset premium próprio e embutido no TMJ
 
 IMPORTANTE:
-  A V2 NÃO herda o cenário visual do office.tmj.
-  O .tmj é gerado de forma independente e o tileset é EMBUTIDO no arquivo,
-  conforme as exigências atuais do WorkAdventure.
+  A V3 NÃO herda o cenário visual do office.tmj.
+  É um mapa independente feito especificamente para o Escritório Virtual VR.
 
 Para iniciar:
   cd "${STARTER_DIR}"
@@ -54,5 +58,5 @@ Para iniciar:
   npm run start
 
 Na tela do starter kit, escolha:
-  vr-office-v2.tmj
+  vr-office-v3.tmj
 EOF
