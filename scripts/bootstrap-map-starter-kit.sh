@@ -16,19 +16,22 @@ else
   git -C "${STARTER_DIR}" pull --ff-only
 fi
 
-if [ ! -f "${STARTER_DIR}/vr-office.tmj" ]; then
-  cp "${STARTER_DIR}/office.tmj" "${STARTER_DIR}/vr-office.tmj"
-  echo "Criado vr-office.tmj a partir do office.tmj oficial."
-else
-  echo "vr-office.tmj já existe; mantendo alterações locais."
-fi
+echo "Gerando planta-guia V1..."
+python3 "${ROOT_DIR}/scripts/generate-vr-layout.py"
 
 cat <<EOF
 
 Mapa preparado em:
   ${STARTER_DIR}/vr-office.tmj
 
-Para editar visualmente, abra esse arquivo no Tiled.
+A planta já contém as camadas:
+  VR_LAYOUT_GUIDE
+  VR_DOORS_GUIDE
+
+A porta do auditório está marcada como:
+  porta_auditorio_interna
+
+Para editar visualmente, abra vr-office.tmj no Tiled.
 
 Para testar o starter kit localmente:
   cd "${STARTER_DIR}"
