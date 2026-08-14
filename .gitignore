@@ -1,0 +1,18 @@
+# WorkAdventure upstream checkout
+vendor/workadventure/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
