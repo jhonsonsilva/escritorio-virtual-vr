@@ -21,36 +21,33 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Gerando Escritório Virtual V2 independente..."
-node "${ROOT_DIR}/scripts/generate-playable-v2.js"
-
-echo ""
-echo "Gerando Escritório Virtual V3 PREMIUM..."
-node "${ROOT_DIR}/scripts/generate-playable-v3.js"
+echo "Gerando Escritório Virtual V5 — PLANTA PREMIUM FINAL..."
+node "${ROOT_DIR}/scripts/generate-playable-v5.js"
 
 cat <<EOF
 
-V3 PREMIUM preparada com sucesso.
+V5 PREMIUM FINAL preparada com sucesso.
 
 Arquivo recomendado para teste:
-  ${STARTER_DIR}/vr-office-v3.tmj
+  ${STARTER_DIR}/vr-office-v5.tmj
 
-A V3 contém:
-  - Sala CEO — Victor Romero com ambientação executiva
-  - Sala Diretor Audiovisual com identidade própria
-  - Produção — exatamente 3 estações completas
-  - Recepção mobiliada e spawn
-  - Área de Convivência central com sofás e mesa
-  - 4 Salas Privativas mobiliadas
-  - Auditório com palco, tela e fileiras de cadeiras
-  - Porta do Auditório pelo corredor interno
-  - Corredores decorados
-  - Colisão em paredes e mobiliário principal
-  - Tileset premium próprio e embutido no TMJ
+A V5 contém:
+  - Sala CEO premium
+  - Sala Diretor Audiovisual tecnológica
+  - Produção com exatamente 4 mesas/computadores
+  - 4 Salas Privativas
+  - Sala de Descanso
+  - Recepção
+  - Auditório para reunião geral
+  - Corredores internos
+  - Vidros e acabamento premium
+  - Spawn na recepção
+  - Colisões nos principais elementos
+  - Tileset próprio e embutido no TMJ
 
 IMPORTANTE:
-  A V3 NÃO herda o cenário visual do office.tmj.
-  É um mapa independente feito especificamente para o Escritório Virtual VR.
+  A V5 é independente das versões V1/V2/V3.
+  Esta é a planta de referência oficial para a próxima fase do Escritório Virtual VR.
 
 Para iniciar:
   cd "${STARTER_DIR}"
@@ -58,5 +55,5 @@ Para iniciar:
   npm run start
 
 Na tela do starter kit, escolha:
-  vr-office-v3.tmj
+  vr-office-v5.tmj
 EOF
